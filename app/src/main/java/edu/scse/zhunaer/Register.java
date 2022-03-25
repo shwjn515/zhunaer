@@ -50,13 +50,16 @@ public class Register extends Activity {
         });
 
 
-        //点击注册按钮监听
+        //点击继续按钮监听
         mBtn_register = findViewById(R.id.btn_zhuce2);
         mBtn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(edu.scse.zhunaer.Register.this,edu.scse.zhunaer.MainActivity.class);
+               // edu.scse.zhunaer.Register.this.finish();
+                Intent intent = new Intent(edu.scse.zhunaer.Register.this,edu.scse.zhunaer.Classify.class);
                 startActivity(intent);
+                overridePendingTransition(R.xml.actions,0);
+                edu.scse.zhunaer.Register.this.finish();
             }
         });
     }

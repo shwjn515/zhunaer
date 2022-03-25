@@ -28,11 +28,12 @@ public class MainActivity extends Activity {
                 //跳转到菜单页面
                 Intent intent = new Intent(edu.scse.zhunaer.MainActivity.this,edu.scse.zhunaer.Register.class);
                 startActivity(intent);
+                overridePendingTransition(R.xml.actions,0);
             }
         });
         //清除用户名输入框内容
         mBtn_delete =findViewById(R.id.btn_delete);
-        eT_username =findViewById(R.id.et_1);
+        eT_username =findViewById(R.id.usernameText);
         mBtn_delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,7 +42,7 @@ public class MainActivity extends Activity {
         });
         //设置密码显示模式
         mBtn_yincang = findViewById(R.id.btn_yincang);
-        eT_password = findViewById(R.id.et_2);
+        eT_password = findViewById(R.id.pwText);
         mBtn_yincang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
