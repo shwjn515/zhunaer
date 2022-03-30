@@ -1,6 +1,7 @@
 package edu.scse.zhunaer;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,7 +30,11 @@ public class Classify extends Activity {
         mBtn_owner.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //房主界面
+                Intent intent = new Intent(Classify.this,Homepage.class);
+                startActivity(intent);
+                //动画切换效果，淡出淡入
+                overridePendingTransition(R.xml.actions,0);
+                Classify.this.finish();
             }
         });
     }
